@@ -1,0 +1,42 @@
+.game-page {
+  width: 600px;
+  height: calc(100vh - 40px);
+  background-color: #eee;
+  padding: 20px;
+  .question {
+    padding: 20px;
+    font-style: italic;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .answers {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .answer-box {
+      display: inline-block;
+      flex-basis: calc(50% - 40px);
+      justify-content: center;
+      flex-direction: column;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+      transition: 0.15s;
+      cursor: pointer;
+      &:hover {
+        transition: 0.15s;
+        transform: scale(1.05, 1.05);
+        box-shadow: 0 0 10px 1px rgba(0, 0, 255, 0.2);
+      }
+      & > div {
+        display: flex;
+        line-height: 85px;
+        font-weight: bold;
+        justify-content: center;
+        flex-direction: row;
+      }
+    }
+  }
+}
